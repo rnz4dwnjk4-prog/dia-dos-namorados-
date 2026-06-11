@@ -172,9 +172,17 @@ const agora = new Date();
 const dias = Math.floor(
 (agora - inicio)/(1000*60*60*24)
 );
+const horas = Math.floor((agora - inicio)/(1000*60*60));
+const minutos = Math.floor((agora - inicio)/(1000*60));
+
 document.getElementById("contador").innerHTML =
-"❤️ Há " + dias + " dias escrevendo nossa história.";
-}
+`
+❤️ ${dias} dias<br>
+❤️ ${horas.toLocaleString('pt-BR')} horas<br>
+❤️ ${minutos.toLocaleString('pt-BR')} minutos<br><br>
+
+te escolhendo todos os dias ❤️
+`;
 atualizar();
 function mostrarFinal(){
 document.getElementById("final").style.display="block";
