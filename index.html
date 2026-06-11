@@ -4,178 +4,322 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rafaella ❤️ Ângelo</title>
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
 }
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:linear-gradient(to bottom,#0f172a,#1e293b,#111827);
+background:#0f172a;
 color:white;
 overflow-x:hidden;
+}
+
+section{
+padding:80px 25px;
 text-align:center;
 }
-section{
-min-height:100vh;
+
+.capa{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('IMG_5248.png');
+background-size:cover;
+background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:30px;
 }
-h1{
+
+.capa h1{
 font-size:3rem;
-margin-bottom:20px;
-}
-h2{
-font-size:2rem;
 margin-bottom:15px;
 }
-p{
-max-width:700px;
-line-height:1.8;
-font-size:1.1rem;
+
+.capa p{
+font-size:1.2rem;
+letter-spacing:3px;
 }
-button{
-padding:15px 30px;
+
+.botao{
+margin-top:30px;
+padding:15px 35px;
 border:none;
 border-radius:50px;
-background:#ff4d88;
-color:white;
+background:white;
+color:#111;
 font-size:18px;
+font-weight:bold;
 cursor:pointer;
-margin-top:20px;
-box-shadow:0 5px 20px rgba(255,77,136,.4);
 }
-.polaroid{
-background:white;
-padding:12px;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-margin:25px;
-max-width:340px;
-transform:rotate(-2deg);
+
+.titulo{
+font-size:2.2rem;
+margin-bottom:25px;
 }
-.polaroid:nth-child(even){
-transform:rotate(2deg);
+
+.texto{
+max-width:800px;
+margin:auto;
+line-height:1.9;
+font-size:1.15rem;
 }
-.polaroid img{
-width:100%;
-display:block;
-border-radius:5px;
-}
-.polaroid p{
-color:#333;
-font-size:14px;
-margin-top:10px;
-}
-#contador{
+
+.contador{
 font-size:1.3rem;
-margin-top:15px;
+line-height:2;
+margin-top:30px;
 }
-#final{
-display:none;
-font-size:2rem;
-padding:40px;
-animation:fade 1s ease;
+
+.galeria{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+max-width:900px;
+margin:auto;
 }
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
+
+.galeria img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
-.star{
-position:fixed;
+
+.carta{
 background:white;
-border-radius:50%;
-animation:twinkle 3s infinite;
-opacity:.7;
+color:#222;
+padding:40px;
+border-radius:25px;
+max-width:850px;
+margin:auto;
+text-align:left;
+line-height:2;
+font-size:1.1rem;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
-@keyframes twinkle{
-50%{opacity:.2;}
+
+.final{
+min-height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
+
+.final h2{
+font-size:2.5rem;
+line-height:1.8;
+max-width:900px;
+}
+
+.assinatura{
+margin-top:40px;
+font-size:1.5rem;
+}
+
+.coracao{
+font-size:3rem;
+margin-top:20px;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.2);
+}
+}
+
+.heart{
+position:fixed;
+font-size:20px;
+pointer-events:none;
+animation:subir 8s linear infinite;
+opacity:.3;
+}
+
+@keyframes subir{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-120vh);
+}
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1.2s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:700px){
+
+.galeria{
+grid-template-columns:1fr;
+}
+
+.capa h1{
+font-size:2.3rem;
+}
+
+.final h2{
+font-size:1.8rem;
+}
+
+}
+
 </style>
 </head>
 <body>
-<section>
-<h1>❤️ Rafaella & Ângelo ❤️</h1>
-<p>
-Algumas histórias precisam de uma segunda chance.
-E a nossa foi a prova disso.
-</p>
-<button onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
-Abrir Nossa História ✨
+
+<section class="capa">
+
+<h1>Rafaella ❤️ Ângelo</h1>
+
+<p>04.09.2024</p>
+
+<a href="#historia">
+<button class="botao">
+Abrir nossa história ✨
 </button>
+</a>
+
 </section>
+
 <section id="historia">
-<h2>O reencontro mais bonito da minha vida</h2>
-<p>
-Eu voltei...
-e dessa vez descobri que era você o amor que eu tanto procurava.
-</p>
-<div id="contador"></div>
+
+<h2 class="titulo fade">
+O reencontro mais bonito da minha vida
+</h2>
+
+<div class="texto fade">
+Se alguém me dissesse que a vida nos daria uma nova chance,
+eu provavelmente não acreditaria.
+
+Mas o tempo tem um jeito curioso de colocar tudo exatamente onde deveria estar.
+
+E o nosso reencontro foi a prova disso.
+</div>
+
+<div id="contador" class="contador fade"></div>
+
 </section>
+
 <section>
-<div class="polaroid">
+
+<h2 class="titulo fade">
+Nossas Memórias ❤️
+</h2>
+
+<div class="galeria fade">
+
 <img src="IMG_5247.png">
-<p>❤️</p>
-</div>
-<div class="polaroid">
+
 <img src="IMG_5248.png">
-<p>❤️</p>
-</div>
-<div class="polaroid">
+
 <img src="IMG_5249.png">
-<p>❤️</p>
-</div>
-<div class="polaroid">
+
 <img src="IMG_5250.png">
-<p>❤️</p>
+
 </div>
+
 </section>
+
 <section>
-<h2>💌 Para você</h2>
-<p>
-Meu amor,
 
-Desde 04/09/2024 cada momento ao seu lado tem sido especial.
+<h2 class="titulo fade">
+💌 Para você, Ângelo
+</h2>
 
-Obrigada por cada abraço, cada conversa, cada risada e por fazer parte da minha vida.
+<div class="carta fade">
 
-Entre todos os caminhos possíveis, meu favorito foi aquele que me trouxe de volta para você.
+Meu amor,<br><br>
 
-Eu te amo. ❤️
+Dizem que algumas pessoas entram na nossa vida para ficar,
+mesmo quando o tempo insiste em afastá-las.<br><br>
 
-</p>
-<button onclick="mostrarFinal()">
-Clique aqui ❤️
-</button>
-<div id="final">
+Nós já tivemos nossa história antes,
+mas a vida guardou para nós um reencontro que eu nunca imaginei que seria tão especial.<br><br>
 
-✨
+Desde 04/09/2024,
+cada conversa, cada abraço, cada sorriso e cada momento ao seu lado me mostraram que o amor pode até esperar,
+mas quando é verdadeiro sempre encontra o caminho de volta.<br><br>
 
-Se eu pudesse viver tudo novamente…
+Você transformou dias comuns em memórias inesquecíveis
+e me fez perceber que o que eu procurava por tanto tempo estava bem diante de mim.<br><br>
+
+O plot twist mais bonito da minha vida foi voltar
+e descobrir que era você o amor que eu tanto procurava.<br><br>
+
+Obrigada por me fazer sentir amada,
+segura e feliz.<br><br>
+
+Eu te amo.<br><br>
+
+❤️ Rafaella
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2 class="fade">
+
+Se eu pudesse viver tudo novamente...
+
+<br><br>
 
 eu escolheria você.
 
+<br><br>
+
 Todas as vezes.
 
-❤️
+</h2>
 
+<div class="coracao">❤️</div>
+
+<div class="assinatura fade">
+Com amor,<br>
+Rafaella
 </div>
-</section>
-<script>
-const inicio = new Date("2024-09-04");
-function atualizar(){
-const agora = new Date();
-const dias = Math.floor(
-(agora - inicio)/(1000*60*60*24)
-);
-const horas = Math.floor((agora - inicio)/(1000*60*60));
-const minutos = Math.floor((agora - inicio)/(1000*60));
 
-document.getElementById("contador").innerHTML =
+</section>
+
+<script>
+
+const inicio = new Date("2024-09-04");
+
+function atualizar(){
+
+const agora = new Date();
+
+const diferenca = agora - inicio;
+
+const dias = Math.floor(diferenca/(1000*60*60*24));
+const horas = Math.floor(diferenca/(1000*60*60));
+const minutos = Math.floor(diferenca/(1000*60));
+
+document.getElementById("contador").innerHTML=
 `
 ❤️ ${dias} dias<br>
 ❤️ ${horas.toLocaleString('pt-BR')} horas<br>
@@ -183,20 +327,44 @@ document.getElementById("contador").innerHTML =
 
 te escolhendo todos os dias ❤️
 `;
+
+}
+
 atualizar();
-function mostrarFinal(){
-document.getElementById("final").style.display="block";
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
-for(let i=0;i<120;i++){
-const star=document.createElement("div");
-star.className="star";
-const size=Math.random()*3+1;
-star.style.width=size+"px";
-star.style.height=size+"px";
-star.style.left=Math.random()*100+"vw";
-star.style.top=Math.random()*100+"vh";
-document.body.appendChild(star);
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
+
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(Math.random()*5+6)+"s";
+
+heart.style.fontSize=
+(Math.random()*15+15)+"px";
+
+document.body.appendChild(heart);
+
 }
+
 </script>
 
-</bod
+</body>
+</html>
