@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Angelo ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff4d88,#ff99c8);
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+h1{
+font-size:2.5em;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+padding:25px;
+border-radius:20px;
+margin-top:20px;
+backdrop-filter:blur(10px);
+}
+
+#contador{
+font-size:1.3em;
+font-weight:bold;
+margin-top:15px;
+}
+
+button{
+background:white;
+color:#ff4d88;
+border:none;
+padding:15px 25px;
+border-radius:30px;
+font-size:16px;
+margin-top:20px;
+cursor:pointer;
+}
+
+#surpresa{
+display:none;
+font-size:1.5em;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ Feliz Dia dos Namorados ❤️</h1>
+
+<div class="card">
+<h2>Para Angelo</h2>
+
+<p>
+O plot twist mais bonito da minha vida foi voltar e descobrir
+que era você o amor que eu tanto procurava.
+</p>
+
+<div id="contador"></div>
+</div>
+
+<div class="card">
+<h2>💌 Uma mensagem para você</h2>
+
+<p>
+Meu amor,
+
+Desde 04/09/2024, cada dia ao seu lado tem sido uma confirmação de que algumas histórias merecem uma segunda chance.
+
+Você me faz sorrir, me faz sentir segura e transforma dias comuns em memórias especiais.
+
+Obrigada por cada abraço, cada conversa e por ser exatamente quem você é.
+
+Se eu pudesse escolher novamente, escolheria você todas as vezes.
+
+Feliz Dia dos Namorados.
+
+Te amo ❤️
+
+— Rafaella
+</p>
+</div>
+
+<button onclick="mostrarSurpresa()">
+Clique aqui ❤️
+</button>
+
+<div id="surpresa">
+💕 Eu me apaixono por você todos os dias. 💕
+</div>
+
+</div>
+
+<script>
+const inicio = new Date("2024-09-04");
+
+function atualizar(){
+const agora = new Date();
+const dias = Math.floor((agora - inicio)/(1000*60*60*24));
+
+document.getElementById("contador").innerHTML =
+"Já se passaram " + dias + " dias desde que nossa história recomeçou ❤️";
+}
+
+atualizar();
+
+function mostrarSurpresa(){
+document.getElementById("surpresa").style.display="block";
+}
+</script>
+
+</body>
+</html>
