@@ -1,156 +1,194 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Angelo ❤️</title>
-
+<title>Rafaella ❤️ Ângelo</title>
 <style>
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#ff4d88,#ff99c8);
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+body{
+background:linear-gradient(to bottom,#0f172a,#1e293b,#111827);
 color:white;
+overflow-x:hidden;
 text-align:center;
+}
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 padding:30px;
 }
-
-.container{
-max-width:700px;
-margin:auto;
-}
-
 h1{
-font-size:2.5em;
+font-size:3rem;
+margin-bottom:20px;
 }
-
-.card{
-background:rgba(255,255,255,0.15);
-padding:25px;
-border-radius:20px;
+h2{
+font-size:2rem;
+margin-bottom:15px;
+}
+p{
+max-width:700px;
+line-height:1.8;
+font-size:1.1rem;
+}
+button{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
 margin-top:20px;
-backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(255,77,136,.4);
 }
-
+.polaroid{
+background:white;
+padding:12px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+margin:25px;
+max-width:340px;
+transform:rotate(-2deg);
+}
+.polaroid:nth-child(even){
+transform:rotate(2deg);
+}
+.polaroid img{
+width:100%;
+display:block;
+border-radius:5px;
+}
+.polaroid p{
+color:#333;
+font-size:14px;
+margin-top:10px;
+}
 #contador{
-font-size:1.3em;
-font-weight:bold;
+font-size:1.3rem;
 margin-top:15px;
 }
-
-button{
-background:white;
-color:#ff4d88;
-border:none;
-padding:15px 25px;
-border-radius:30px;
-font-size:16px;
-margin-top:20px;
-cursor:pointer;
-}
-
-#surpresa{
+#final{
 display:none;
-font-size:1.5em;
-margin-top:20px;
+font-size:2rem;
+padding:40px;
+animation:fade 1s ease;
+}
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+.star{
+position:fixed;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+opacity:.7;
+}
+@keyframes twinkle{
+50%{opacity:.2;}
 }
 </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<h1>❤️ Feliz Dia dos Namorados ❤️</h1>
-<div style="margin-top:20px;">
-  <img src="IMG_5247.png" style="width:90%;max-width:350px;border-radius:20px;">
-</div>
-<div class="card">
-<h2>Para Angelo</h2>
-
+<section>
+<h1>❤️ Rafaella & Ângelo ❤️</h1>
 <p>
-O plot twist mais bonito da minha vida foi voltar e descobrir
-que era você o amor que eu tanto procurava.
+Algumas histórias precisam de uma segunda chance.
+E a nossa foi a prova disso.
 </p>
-
+<button onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+Abrir Nossa História ✨
+</button>
+</section>
+<section id="historia">
+<h2>O reencontro mais bonito da minha vida</h2>
+<p>
+Eu voltei...
+e dessa vez descobri que era você o amor que eu tanto procurava.
+</p>
 <div id="contador"></div>
+</section>
+<section>
+<div class="polaroid">
+<img src="IMG_5247.png">
+<p>❤️</p>
 </div>
-
-<div class="card">
-  <div style="margin:20px 0;">
-  <img src="IMG_5248.png" style="width:90%;max-width:350px;border-radius:20px;">
+<div class="polaroid">
+<img src="IMG_5248.png">
+<p>❤️</p>
 </div>
-<h2>💌 Uma mensagem para você</h2>
-
+<div class="polaroid">
+<img src="IMG_5249.png">
+<p>❤️</p>
+</div>
+<div class="polaroid">
+<img src="IMG_5250.png">
+<p>❤️</p>
+</div>
+</section>
+<section>
+<h2>💌 Para você</h2>
 <p>
 Meu amor,
 
-Desde 04/09/2024, cada dia ao seu lado tem sido uma confirmação de que algumas histórias merecem uma segunda chance.
+Desde 04/09/2024 cada momento ao seu lado tem sido especial.
 
-Você me faz sorrir, me faz sentir segura e transforma dias comuns em memórias especiais.
+Obrigada por cada abraço, cada conversa, cada risada e por fazer parte da minha vida.
 
-Obrigada por cada abraço, cada conversa e por ser exatamente quem você é.
+Entre todos os caminhos possíveis, meu favorito foi aquele que me trouxe de volta para você.
 
-Se eu pudesse escolher novamente, escolheria você todas as vezes.
+Eu te amo. ❤️
 
-Feliz Dia dos Namorados.
-
-Te amo ❤️
-
-— Rafaella
 </p>
-</div>
-<div style="margin:20px 0;">
-  <img src="IMG_5249.png" style="width:90%;max-width:350px;border-radius:20px;">
-</div>
-<button onclick="mostrarSurpresa()">
+<button onclick="mostrarFinal()">
 Clique aqui ❤️
 </button>
-  <h2>✨ Uma última pergunta...</h2>
+<div id="final">
 
-<p>
-Se eu te escolher amanhã,
-depois de amanhã,
-e em todos os dias que vierem...
+✨
 
-você continua sendo meu namorado? ❤️
-</p>
+Se eu pudesse viver tudo novamente…
 
-<button onclick="alert('Eu te amo mais do que as palavras conseguem explicar ❤️')">
-Responder ❤️
-</button>
-  <div style="margin:20px 0;">
-  <img src="IMG_5250.png" style="width:90%;max-width:350px;border-radius:20px;">
-</div>
-<div id="surpresa">
-💕 Eu me apaixono por você todos os dias. 💕
+eu escolheria você.
 
-<br><br>
+Todas as vezes.
 
-Você foi o reencontro mais bonito que a vida poderia me dar.
-
-Te amo, Angelo ❤️
-</div>
+❤️
 
 </div>
-
+</section>
 <script>
 const inicio = new Date("2024-09-04");
-
 function atualizar(){
 const agora = new Date();
-const dias = Math.floor((agora - inicio)/(1000*60*60*24));
-
+const dias = Math.floor(
+(agora - inicio)/(1000*60*60*24)
+);
 document.getElementById("contador").innerHTML =
-"Já se passaram " + dias + " dias desde que nossa história recomeçou ❤️";
+"❤️ Há " + dias + " dias escrevendo nossa história.";
 }
-
 atualizar();
-
-function mostrarSurpresa(){
-document.getElementById("surpresa").style.display="block";
+function mostrarFinal(){
+document.getElementById("final").style.display="block";
+}
+for(let i=0;i<120;i++){
+const star=document.createElement("div");
+star.className="star";
+const size=Math.random()*3+1;
+star.style.width=size+"px";
+star.style.height=size+"px";
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+document.body.appendChild(star);
 }
 </script>
 
-</body>
-</html>
+</bod
